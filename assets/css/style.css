@@ -37,9 +37,25 @@ a:hover {
 img {
     width: 100%;
 }
+.text-brand {
+    color: var(--color-brand);
+}
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
 /* End Global Rules */
 
 /* Start Navbar */
+.navbar {
+    background-color: var(--color-base);
+}
 .navbar .nav-link {
     font-weight: 700;
     text-transform: uppercase;
@@ -62,8 +78,54 @@ img {
     .navbar-brand img {
         border: 8px solid var(--color-brand)
     }
+
+    /* Start Content Wrapper */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+    }
+    /* End Content Wrapper */
 }
 /* End Navbar */
+
+/* Start BTN */
+.btn {
+    padding: 12px 32px;
+    font-weight: var(--color-brand);
+}
+.btn-brand {
+    background-color: var(--color-brand);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+.btn-brand:hover,
+.btn-brand:focus{
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+.link-custom::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+}
+.link-custom:hover::after {
+    width: 100%;
+}
+/* End BTN */
+
 
 
 
